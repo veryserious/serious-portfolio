@@ -4,14 +4,19 @@ import Stack from "@/components/Stack";
 import TechStack from "@/layout/TechStack";
 import Section from "@/layout/Section";
 import { projects, roles } from "@/data/data";
-import Image from "next/image";
 import ImageCardGroup from "@/components/ImageCardGroup";
 import IconGroup from "@/components/IconGroup";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Very Serious web development",
+  description: " I build website and fullstack web applications for a living.",
+};
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between text-gray-700 dark:text-white font-sans">
-      <div className="flex flex-col w-full gap-36">
+      <div className="flex flex-col w-full gap-12 lg:gap-36">
         <Section id="hero" className="pt-48">
           <h1 className="text-4xl font-bold lg:text-6xl mb-8">
             <span className="text-purple-800 dark:text-purple-400 block mb-4">
@@ -49,12 +54,15 @@ export default function Home() {
         <Section id="tech-stack">
           <TechStack />
         </Section>
-        <section id="about" className=" bg-purple-800 text-white h-[600px]">
+        <section
+          id="about"
+          className=" bg-purple-800 text-white h-[650px] lg:h-[600px]"
+        >
           <Center>
             <Container>
               <Center>
                 <Stack gap={"10"} className="mt-[-40px]">
-                  <h2 className="font-bold text-center lg:text-3xl mb-4">
+                  <h2 className="font-bold text-center text-2xl lg:text-3xl mb-4">
                     Hi! I&apos;m Jamie, and I build things on the web.
                   </h2>
                   <p className="text-xl text-center max-w-2xl leading-8">

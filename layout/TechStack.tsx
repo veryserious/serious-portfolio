@@ -6,7 +6,7 @@ export default function TechStack() {
   return (
     <div className="flex flex-col gap-16">
       <div className="flex flex-col gap-6">
-        <h2 className="font-bold text-grey-800 lg:text-3xl">
+        <h2 className="font-bold text-grey-800 text-2xl lg:text-3xl">
           I build things with...
         </h2>
         <IconGroup variant="stack" />

@@ -41,7 +41,7 @@ export default function IconGroup({ variant }: { variant: string }) {
       }}
     >
       <div
-        className={`flex flex-row items-center ${
+        className={`flex flex-row items-center flex-wrap ${
           variant === "stack" ? "gap-12" : "gap-4"
         }`}
       >
