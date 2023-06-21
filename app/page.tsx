@@ -31,6 +31,7 @@ export default function Home() {
             <video
               autoPlay
               loop
+              muted
               style={{
                 objectFit: "cover",
                 objectPosition: "center",
@@ -39,6 +40,9 @@ export default function Home() {
               }}
             >
               <source src="/cage.mp4" type="video/mp4" />
+              {/* TODO - Add all of the video formats */}
+              {/* <source src="/cage.webm" type="video/webm" /> */}
+              {/* <source src="/cage.ogv" type="video/ogg" /> */}
             </video>
           </div>
         </Section>
