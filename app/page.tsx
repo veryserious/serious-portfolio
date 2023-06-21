@@ -11,7 +11,7 @@ import IconGroup from "@/components/IconGroup";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between text-gray-700 dark:text-white font-sans">
-      <Stack gap={"36"} className="w-full">
+      <div className="flex flex-col w-full gap-36">
         <Section id="hero" className="pt-48">
           <h1 className="text-4xl font-bold lg:text-6xl mb-8">
             <span className="text-purple-800 dark:text-purple-400 block mb-4">
@@ -28,15 +28,18 @@ export default function Home() {
             <IconGroup variant="contact" />
           </div>
           <div className="relative rounded-full w-96 h-96 flex justify-center items-center mt-12 overflow-hidden">
-            <Image
-              src="/cage.gif"
-              alt="Nicolas Cage"
-              fill
+            <video
+              autoPlay
+              loop
               style={{
                 objectFit: "cover",
                 objectPosition: "center",
+                width: "100%",
+                height: "100%",
               }}
-            />
+            >
+              <source src="/cage.mp4" type="video/mp4" />
+            </video>
           </div>
         </Section>
         <Section id="tech-stack">
@@ -103,7 +106,7 @@ export default function Home() {
           </h2>
           <ImageCardGroup cards={projects} />
         </Section>
-      </Stack>
+      </div>
     </main>
   );
 }
