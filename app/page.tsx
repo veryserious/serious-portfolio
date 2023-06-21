@@ -7,7 +7,6 @@ import { projects, roles } from "@/data/data";
 import Image from "next/image";
 import ImageCardGroup from "@/components/ImageCardGroup";
 import IconGroup from "@/components/IconGroup";
-import { SiGithub } from "react-icons/si";
 
 export default function Home() {
   return (
