@@ -25,10 +25,12 @@ const icons = [
 const contactIcons = [
   {
     Icon: SiGithub,
+    description: "Github",
     link: "https://github.com/veryserious",
   },
   {
     Icon: SiLinkedin,
+    description: "LinkedIn",
     link: "https://www.linkedin.com/in/james-breen-463a1963/",
   },
 ];
@@ -48,7 +50,13 @@ export default function IconGroup({ variant }: { variant: string }) {
         {variant === "stack" && icons.map((Icon, i) => <Icon key={i} />)}
         {variant === "contact" &&
           contactIcons.map((icon, i) => (
-            <a key={i} href={icon.link} target="_blank" rel="noreferrer">
+            <a
+              key={i}
+              href={icon.link}
+              aria-label={icon.description}
+              target="_blank"
+              rel="noreferrer"
+            >
               <icon.Icon className="hover:text-purple-600" />
             </a>
           ))}

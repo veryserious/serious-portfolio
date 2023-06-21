@@ -61,7 +61,7 @@ export default function Home() {
           <Center>
             <Container>
               <Center>
-                <Stack gap={"10"} className="mt-[-40px]">
+                <div className="flex flex-col gap-10 mt-[-40px]">
                   <h2 className="font-bold text-center text-2xl lg:text-3xl mb-4">
                     Hi! I&apos;m Jamie, and I build things on the web.
                   </h2>
@@ -74,7 +74,7 @@ export default function Home() {
                     a specialist in building high performance Next.js
                     applications.
                   </p>
-                </Stack>
+                </div>
               </Center>
             </Container>
           </Center>
@@ -113,9 +113,7 @@ export default function Home() {
           </div>
         </section>
         <Section id="recent-work" className="py-6">
-          <h2 className="font-bold text-center lg:text-3xl mb-4">
-            Recent Work
-          </h2>
+          <h2 className="font-bold text-center text-3xl mb-4">Recent Work</h2>
           <ImageCardGroup cards={projects} />
         </Section>
       </div>
