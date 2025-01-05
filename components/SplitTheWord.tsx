@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export function SplitTheWord() {
   useEffect(() => {
-    const splitting = require("Splitting");
+    const splitting = require("splitting");
     splitting();
   }, []);
 
