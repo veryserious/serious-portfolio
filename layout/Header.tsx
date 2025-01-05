@@ -20,7 +20,9 @@ export default function Header() {
                   height={45}
                 />
               </Link>
-              <Button>Get in touch</Button>
+              <Button variant="samePageLink" href="#contact">
+                Get in touch
+              </Button>
             </div>
           </Container>
         </Center>

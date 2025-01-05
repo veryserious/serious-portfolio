@@ -1,12 +1,13 @@
 import Center from "@/components/Center";
 import Container from "@/components/Container";
-import Stack from "@/components/Stack";
 import TechStack from "@/layout/TechStack";
 import Section from "@/layout/Section";
 import { projects, roles } from "@/data/data";
 import ImageCardGroup from "@/components/ImageCardGroup";
 import IconGroup from "@/components/IconGroup";
 import { Metadata } from "next";
+import { SplitTheWord } from "@/components/SplitTheWord";
+import { Contact } from "@/layout/Contact";
 
 export const metadata: Metadata = {
   title: "Very Serious web development",
@@ -19,10 +20,17 @@ export default function Home() {
       <div className="flex flex-col w-full gap-12 lg:gap-36">
         <Section id="hero" className="pt-48">
           <h1 className="text-4xl font-bold lg:text-6xl mb-8">
-            <span className="text-purple-800 dark:text-purple-400 block mb-4">
+            <span
+              data-splitting
+              className={
+                "wiggle text-purple-800 dark:text-purple-400 block mb-4"
+              }
+            >
               Very Serious.
             </span>
-            Full stack web developer
+            <span className="spin" data-splitting>
+              Full stack web developer
+            </span>
           </h1>
 
           <p className="text-xl">
@@ -116,7 +124,12 @@ export default function Home() {
           <h2 className="font-bold text-center text-3xl mb-4">Recent Work</h2>
           <ImageCardGroup cards={projects} />
         </Section>
+        <Section id="contact" className="py-6">
+          <h2 className="font-bold text-center text-3xl mb-4">Get in touch</h2>
+          <Contact />
+        </Section>
       </div>
+      <SplitTheWord />
     </main>
   );
 }

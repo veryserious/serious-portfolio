@@ -25,3 +25,38 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.wiggle span.char {
+  animation: expand 2s infinite ease-in-out normal;
+  animation-delay: calc(var(--char-index) * 0.2s);
+  user-select: none;
+}
+
+@keyframes expand {
+  50% {
+    text-shadow: 1vmin 1vmin 0 hsl(358deg 66% 55%);
+  }
+}
+
+/* .spin:is(:hover, :focus-visible) span.char {
+  display: inline-block;
+  --total: 0.425s;
+  opacity: 1;
+  transition: translate 0.2s;
+  transition-delay: calc(
+    (sin((var(--char-index) / var(--char-total)) * 45deg) * var(--total)) + 0.1s
+  );
+  translate: 0 -1lh;
+}
+
+.spin {
+  clip-path: inset(0 0 0 0);
+}
+.spin span.char {
+  &::after {
+    content: attr(data-char);
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+} */
